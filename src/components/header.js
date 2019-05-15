@@ -8,6 +8,10 @@ const Header = () => (
     style={{
       background: `rebeccapurple`,
       marginBottom: `0`,
+      position: `fixed`,
+      top: `0`,
+      width: `100%`,
+      zIndex: `1`,
     }}
   >
     <div
@@ -52,8 +56,10 @@ const NavLink = styled(Link)`
   display: block;
   float: left;
   width: 25%;
+  font-family: "Cinzel", serif;
 
-  &:hover, &:active {
-    background-color:black;
+  &:hover,
+  &:active {
+    background-color: black;
   }
 `

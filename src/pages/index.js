@@ -20,7 +20,8 @@ const IndexPage = ({ data }) => (
       ]}
     />
     <div>
-      <Img s
+      <Img
+        s
         fluid={data.headerGlasses.childImageSharp.fluid}
         alt="Diamond Opticians"
       />
@@ -30,22 +31,38 @@ const IndexPage = ({ data }) => (
     </div>
     <TextSection>
       <h1>Eyeglasses</h1>
-      <p>Text goes here</p>
+      <p>
+        Amet pariatur elit consequat elit nulla non commodo id irure
+        exercitation. Esse voluptate excepteur sit culpa est nisi eu in velit
+        velit do ad magna. Tempor ut excepteur adipisicing nostrud consectetur
+        labore nostrud. Proident consectetur ullamco non cupidatat. 
+      </p>
     </TextSection>
     <Img fluid={data.eyeGlasses.childImageSharp.fluid} alt="Eyeglasses" />
     <TextSection>
       <h1>Sunglasses</h1>
-      <p>Text goes here</p>
+      <p>
+        Velit velit nostrud culpa pariatur esse adipisicing pariatur. Ipsum
+        consequat nostrud proident mollit do sit proident enim. Duis laborum ex
+        commodo cupidatat veniam aute anim. 
+      </p>
     </TextSection>
     <Img fluid={data.headerSunglasses.childImageSharp.fluid} alt="Sunglasses" />
     <TextSection>
       <h1>Sports Glasses</h1>
-      <p>Text goes here</p>
+      <p>
+        Aute cupidatat nulla occaecat labore velit. Magna commodo eu nostrud
+        commodo in deserunt. Sit quis ad minim sit consectetur exercitation in
+        labore veniam anim.
+      </p>
     </TextSection>
     <Img fluid={data.skiGoggles.childImageSharp.fluid} alt="Sports Glasses" />
     <TextSection>
       <h1>Contact</h1>
-      <p>Text goes here</p>
+      <p>HOURS M, T, Th, F 9:30-5:30 Wednesday CLOSED Sat 9:30-12:30
+      PHONE: 603-382-8242
+      E-MAIL: diamond.opticians@gmail.com
+      ADDRESS: 23 Plaistow Road (Route 125) Plaistow, NH 03865-0538</p>
     </TextSection>
     <Img fluid={data.showRoom.childImageSharp.fluid} alt="Show Room" />
   </Layout>
@@ -106,17 +123,24 @@ const LogoWrapper = styled.div`
     padding: 10px;
     margin-right: 30px;
     color: white;
-    vertical-align:middle;
+    height: 100px;
+    line-height: 100px;
+    font-family: "Cinzel", serif;
   }
 `
 const TextSection = styled.div`
   background: rebeccapurple;
-  height: 200px;
+  height: 150px;
+  z-index: 1;
 
   h1 {
     text-align: center;
+    color: white;
+    padding: 10px;
+    font-family: "Cinzel", serif;
   }
   p {
     text-align: center;
+    color: white;
   }
 `

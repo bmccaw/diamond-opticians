@@ -8,10 +8,10 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { StaticQuery, graphql } from "gatsby"
+import styled from "styled-components"
 
 import Header from "./header"
 import "./layout.css"
-import Img from "gatsby-image"
 
 
 const Layout = ({ children }) => (
@@ -36,11 +36,9 @@ const Layout = ({ children }) => (
           }}
         >
           <main>{children}</main>
-          <footer>
-            © {new Date().getFullYear()} Diamond Opticians, Built with
-            {` `}
-            <a href="https://www.gatsbyjs.org">Gatsby</a>
-          </footer>
+          <Footer>
+            © {new Date().getFullYear()} Diamond Opticians
+          </Footer>
         </div>
       </>
     )}
@@ -52,3 +50,9 @@ Layout.propTypes = {
 }
 
 export default Layout
+
+const Footer = styled.div `
+background-color: black;
+color: white;
+z-index: 1;
+`
