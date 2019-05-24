@@ -30,39 +30,44 @@ const IndexPage = ({ data }) => (
       </LogoWrapper>
     </div>
     <TextSection>
-      <h1>Eyeglasses</h1>
-      <p>
+      <TextHead>Eyeglasses</TextHead>
+      <TextContent>
         Amet pariatur elit consequat elit nulla non commodo id irure
         exercitation. Esse voluptate excepteur sit culpa est nisi eu in velit
         velit do ad magna. Tempor ut excepteur adipisicing nostrud consectetur
-        labore nostrud. Proident consectetur ullamco non cupidatat. 
-      </p>
+        labore nostrud. Proident consectetur ullamco non cupidatat.
+      </TextContent>
     </TextSection>
     <Img fluid={data.eyeGlasses.childImageSharp.fluid} alt="Eyeglasses" />
     <TextSection>
-      <h1>Sunglasses</h1>
-      <p>
+      <TextHead>Sunglasses</TextHead>
+      <TextContent>
         Velit velit nostrud culpa pariatur esse adipisicing pariatur. Ipsum
         consequat nostrud proident mollit do sit proident enim. Duis laborum ex
-        commodo cupidatat veniam aute anim. 
-      </p>
+        commodo cupidatat veniam aute anim.
+      </TextContent>
     </TextSection>
     <Img fluid={data.headerSunglasses.childImageSharp.fluid} alt="Sunglasses" />
     <TextSection>
-      <h1>Sports Glasses</h1>
-      <p>
+      <TextHead>Sports Glasses</TextHead>
+      <TextContent>
         Aute cupidatat nulla occaecat labore velit. Magna commodo eu nostrud
         commodo in deserunt. Sit quis ad minim sit consectetur exercitation in
         labore veniam anim.
-      </p>
+      </TextContent>
     </TextSection>
     <Img fluid={data.skiGoggles.childImageSharp.fluid} alt="Sports Glasses" />
     <TextSection>
-      <h1>Contact</h1>
-      <p>HOURS M, T, Th, F 9:30-5:30 Wednesday CLOSED Sat 9:30-12:30
-      PHONE: 603-382-8242
-      E-MAIL: diamond.opticians@gmail.com
-      ADDRESS: 23 Plaistow Road (Route 125) Plaistow, NH 03865-0538</p>
+      <TextHead>Contact</TextHead>
+      <TextContent>
+        HOURS: M, T, TH, F 9:30-5:30 Wednesday-CLOSED Sat 9:30-12:30
+        <br/> 
+        PHONE: 603-382-8242 
+        <br/>
+        E-MAIL: diamond.opticians@gmail.com 
+        <br/>
+        ADDRESS: 23 Plaistow Road (Route 125) Plaistow, NH 03865-0538
+      </TextContent>
     </TextSection>
     <Img fluid={data.showRoom.childImageSharp.fluid} alt="Show Room" />
   </Layout>
@@ -130,17 +135,21 @@ const LogoWrapper = styled.div`
 `
 const TextSection = styled.div`
   background: rebeccapurple;
-  height: 150px;
+  height: auto;
   z-index: 1;
-
-  h1 {
-    text-align: center;
-    color: white;
-    padding: 10px;
-    font-family: "Cinzel", serif;
-  }
-  p {
-    text-align: center;
-    color: white;
-  }
+  display:grid;
+  grid-template-columns:1fr 1fr 1fr;
+  grid-template-rows: 70px 1fr;
+`
+const TextHead = styled.h1`
+  color: white;
+  padding: 10px;
+  font-family: "Cinzel", serif;
+  grid-column: 2 / span 1;
+`
+const TextContent = styled.p`
+padding:10px;
+  color: white;
+  grid-row: 2 / span 1;
+  grid-column: 2 / span 2;
 `

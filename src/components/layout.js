@@ -55,4 +55,5 @@ const Footer = styled.div `
 background-color: black;
 color: white;
 z-index: 1;
+font-size:12px;
 `
