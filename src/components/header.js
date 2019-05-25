@@ -23,16 +23,16 @@ const Header = () => (
       }}
     >
       <h3 style={{ margin: 0 }}>
-        <NavLink to="/">Eyeglasses</NavLink>
+        <NavLink to="/#eyeglasses">Eyeglasses</NavLink>
       </h3>
       <h3 style={{ margin: 0 }}>
-        <NavLink to="/">Sunglasses</NavLink>
+        <NavLink to="/#sunglasses">Sunglasses</NavLink>
       </h3>
       <h3 style={{ margin: 0 }}>
-        <NavLink to="/">Sport Glasses</NavLink>
+        <NavLink to="/#sportglasses">Sport Glasses</NavLink>
       </h3>
       <h3 style={{ margin: 0 }}>
-        <NavLink to="/">Contact</NavLink>
+        <NavLink to="/#contact">Contact</NavLink>
       </h3>
     </div>
   </header>
