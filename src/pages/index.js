@@ -8,7 +8,7 @@ import SEO from "../components/seo"
 
 if (typeof window !== "undefined") {
   require("smooth-scroll")('a[href*="#"]', {
-    header: '[header]' 
+    header: 'header' 
   })
 }
 

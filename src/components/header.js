@@ -4,7 +4,7 @@ import React from "react"
 import styled from "styled-components"
 
 const Header = () => (
-  <header
+  <header 
     style={{
       background: `rebeccapurple`,
       marginBottom: `0`,
