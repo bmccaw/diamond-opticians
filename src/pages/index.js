@@ -8,7 +8,7 @@ import SEO from "../components/seo"
 
 if (typeof window !== "undefined") {
   require("smooth-scroll")('a[href*="#"]', {
-    header: 'header' 
+    header: "header",
   })
 }
 
@@ -64,17 +64,27 @@ const IndexPage = ({ data }) => (
     <Img fluid={data.skiGoggles.childImageSharp.fluid} alt="Sports Glasses" />
     <TextSection id="contact">
       <TextHead>Contact</TextHead>
-      <TextContent style={{ fontSize: `15px`, }}>
+      <TextContent style={{ fontSize: `15px` }}>
         HOURS: M, T, TH, F 9:30-5:30 Wednesday-CLOSED Sat 9:30-12:30
         <br />
         PHONE: <a href="tel:603-382-8242">603-382-8242</a>
         <br />
-        E-MAIL: <a href="mailto:diamond.opticians@gmail.com">diamond.opticians@gmail.com</a>
+        E-MAIL:{" "}
+        <a href="mailto:diamond.opticians@gmail.com">
+          diamond.opticians@gmail.com
+        </a>
         <br />
         ADDRESS: 23 Plaistow Road (Route 125) Plaistow, NH 03865-0538
       </TextContent>
     </TextSection>
-    <Img fluid={data.showRoom.childImageSharp.fluid} alt="Show Room" />
+    <div style={{ position: `relative`, height: `100vh` }}>
+      <Img
+        css={{ top: 0, left: 0, right: 0, bottom: 0 }}
+        style={{ position: `fixed`, zIndex: `-1` }}
+        fluid={data.showRoom.childImageSharp.fluid}
+        alt="Show Room"
+      />
+    </div>
   </Layout>
 )
 

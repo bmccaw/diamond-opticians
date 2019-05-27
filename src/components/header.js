@@ -12,6 +12,7 @@ const Header = () => (
       top: `0`,
       width: `100%`,
       zIndex: `1`,
+      borderBottom: `solid white 1px`
     }}
   >
     <div
