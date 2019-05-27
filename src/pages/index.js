@@ -4,6 +4,7 @@ import styled from "styled-components"
 
 import Layout from "../components/layout"
 import Img from "gatsby-image"
+import BackgroundImage from "gatsby-background-image"
 import SEO from "../components/seo"
 
 if (typeof window !== "undefined") {
@@ -34,53 +35,92 @@ const IndexPage = ({ data }) => (
         <h1>Diamond Opticians</h1>
       </LogoWrapper>
     </div>
-    <TextSection>
-      <TextHead id="eyeglasses">Eyeglasses</TextHead>
-      <TextContent>
-        Amet pariatur elit consequat elit nulla non commodo id irure
-        exercitation. Esse voluptate excepteur sit culpa est nisi eu in velit
-        velit do ad magna. Tempor ut excepteur adipisicing nostrud consectetur
-        labore nostrud. Proident consectetur ullamco non cupidatat.
-      </TextContent>
-    </TextSection>
-    <Img fluid={data.eyeGlasses.childImageSharp.fluid} alt="Eyeglasses" />
-    <TextSection id="sunglasses">
-      <TextHead>Sunglasses</TextHead>
-      <TextContent>
-        Velit velit nostrud culpa pariatur esse adipisicing pariatur. Ipsum
-        consequat nostrud proident mollit do sit proident enim. Duis laborum ex
-        commodo cupidatat veniam aute anim.
-      </TextContent>
-    </TextSection>
-    <Img fluid={data.headerSunglasses.childImageSharp.fluid} alt="Sunglasses" />
-    <TextSection>
-      <TextHead id="sportglasses">Sports Glasses</TextHead>
-      <TextContent>
-        Aute cupidatat nulla occaecat labore velit. Magna commodo eu nostrud
-        commodo in deserunt. Sit quis ad minim sit consectetur exercitation in
-        labore veniam anim.
-      </TextContent>
-    </TextSection>
-    <Img fluid={data.skiGoggles.childImageSharp.fluid} alt="Sports Glasses" />
-    <TextSection id="contact">
-      <TextHead>Contact</TextHead>
-      <TextContent style={{ fontSize: `15px` }}>
-        HOURS: M, T, TH, F 9:30-5:30 Wednesday-CLOSED Sat 9:30-12:30
-        <br />
-        PHONE: <a href="tel:603-382-8242">603-382-8242</a>
-        <br />
-        E-MAIL:{" "}
-        <a href="mailto:diamond.opticians@gmail.com">
-          diamond.opticians@gmail.com
-        </a>
-        <br />
-        ADDRESS: 23 Plaistow Road (Route 125) Plaistow, NH 03865-0538
-      </TextContent>
-    </TextSection>
-    <div style={{ position: `relative`, height: `100vh` }}>
-      <Img
+    <div style={{ position: `relative`, height: `860px` }}>
+      <TextSection>
+        <TextHead id="eyeglasses">Eyeglasses</TextHead>
+        <TextContent>
+          Amet pariatur elit consequat elit nulla non commodo id irure
+          exercitation. Esse voluptate excepteur sit culpa est nisi eu in velit
+          velit do ad magna. Tempor ut excepteur adipisicing nostrud consectetur
+          labore nostrud. Proident consectetur ullamco non cupidatat.
+        </TextContent>
+      </TextSection>
+      <BackgroundImage
         css={{ top: 0, left: 0, right: 0, bottom: 0 }}
-        style={{ position: `fixed`, zIndex: `-1` }}
+        style={{
+          position: `absolute`,
+          backgroundAttachment: `fixed`,
+          zIndex: `-2`,
+        }}
+        fluid={data.eyeGlasses.childImageSharp.fluid}
+        alt="Eyeglasses"
+      />
+    </div>
+    <div style={{ position: `relative`, height: `860px` }}>
+      <TextSection id="sunglasses">
+        <TextHead>Sunglasses</TextHead>
+        <TextContent>
+          Velit velit nostrud culpa pariatur esse adipisicing pariatur. Ipsum
+          consequat nostrud proident mollit do sit proident enim. Duis laborum
+          ex commodo cupidatat veniam aute anim.
+        </TextContent>
+      </TextSection>
+
+      <BackgroundImage
+        css={{ top: 0, left: 0, right: 0, bottom: 0 }}
+        style={{
+          position: `absolute`,
+          backgroundAttachment: `fixed`,
+          zIndex: `-2`,
+        }}
+        fluid={data.headerSunglasses.childImageSharp.fluid}
+        alt="Sunglasses"
+      />
+    </div>
+    <div style={{ position: `relative`, height: `860px` }}>
+      <TextSection>
+        <TextHead id="sportglasses">Sports Glasses</TextHead>
+        <TextContent>
+          Aute cupidatat nulla occaecat labore velit. Magna commodo eu nostrud
+          commodo in deserunt. Sit quis ad minim sit consectetur exercitation in
+          labore veniam anim.
+        </TextContent>
+      </TextSection>
+
+      <BackgroundImage
+        css={{ top: 0, left: 0, right: 0, bottom: 0 }}
+        style={{
+          position: `absolute`,
+          backgroundAttachment: `fixed`,
+          zIndex: `-2`,
+        }}
+        fluid={data.skiGoggles.childImageSharp.fluid}
+        alt="Sports Glasses"
+      />
+    </div>
+    <div style={{ position: `relative`, height: `860px` }}>
+      <TextSection id="contact">
+        <TextHead>Contact</TextHead>
+        <TextContent style={{ fontSize: `15px` }}>
+          HOURS: M, T, TH, F 9:30-5:30 Wednesday-CLOSED Sat 9:30-12:30
+          <br />
+          PHONE: <a href="tel:603-382-8242">603-382-8242</a>
+          <br />
+          E-MAIL:{" "}
+          <a href="mailto:diamond.opticians@gmail.com">
+            diamond.opticians@gmail.com
+          </a>
+          <br />
+          ADDRESS: 23 Plaistow Road (Route 125) Plaistow, NH 03865-0538
+        </TextContent>
+      </TextSection>
+      <BackgroundImage
+        css={{ top: 0, left: 0, right: 0, bottom: 0 }}
+        style={{
+          position: `absolute`,
+          backgroundAttachment: `fixed`,
+          zIndex: `-2`,
+        }}
         fluid={data.showRoom.childImageSharp.fluid}
         alt="Show Room"
       />
