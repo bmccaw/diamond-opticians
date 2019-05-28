@@ -6,6 +6,7 @@ import Layout from "../components/layout"
 import Img from "gatsby-image"
 import BackgroundImage from "gatsby-background-image"
 import SEO from "../components/seo"
+import Map from "../components/map"
 
 if (typeof window !== "undefined") {
   require("smooth-scroll")('a[href*="#"]', {
@@ -65,7 +66,6 @@ const IndexPage = ({ data }) => (
           ex commodo cupidatat veniam aute anim.
         </TextContent>
       </TextSection>
-
       <BackgroundImage
         css={{ top: 0, left: 0, right: 0, bottom: 0 }}
         style={{
@@ -86,7 +86,6 @@ const IndexPage = ({ data }) => (
           labore veniam anim.
         </TextContent>
       </TextSection>
-
       <BackgroundImage
         css={{ top: 0, left: 0, right: 0, bottom: 0 }}
         style={{
@@ -183,7 +182,7 @@ const LogoWrapper = styled.div`
     padding: 10px;
     margin-right: 30px;
     color: white;
-    height: 100px;
+    margin-bottom:0px;
     line-height: 100px;
     font-family: "Cinzel", serif;
   }
