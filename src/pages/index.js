@@ -3,10 +3,11 @@ import { Link, graphql, StaticQuery } from "gatsby"
 import styled from "styled-components"
 
 import Layout from "../components/layout"
-import Img from "gatsby-image"
 import BackgroundImage from "gatsby-background-image"
 import SEO from "../components/seo"
 import Map from "../components/map"
+import Img from "gatsby-image"
+
 
 if (typeof window !== "undefined") {
   require("smooth-scroll")('a[href*="#"]', {
